@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+module.exports = { 
     content: [
       "./resources/**/*.blade.php",
       "./resources/**/*.js",
@@ -8,5 +8,5 @@ module.exports = {
     theme: {
       extend: {},
     },
-    plugins: [],
+    plugins: [require("daisyui")],
   }
