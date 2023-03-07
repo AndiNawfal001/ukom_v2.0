@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('layouts.main');
 });
+
+Route::get('/ruangan', [RuanganController::class, 'index']);
+Route::get('/ruangan/tambah', [RuanganController::class, 'formTambah']);
+Route::post('/ruangan/simpan', [RuanganController::class, 'store']);

@@ -7,31 +7,15 @@
     <title>Document</title>
     @vite('resources/css/app.css')
 </head>
-<body> 
-<div class="navbar bg-base-100">
+<body>
+<div class="navbar bg-base-100 sticky top-0 z-50">
   <div class="navbar-start">
-    <div class="dropdown"> 
+    <div class="dropdown">
       <label tabindex="0" for="my-drawer-2" class="btn btn-ghost lg:hidden">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-      </label> 
+      </label>
     </div>
     <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li tabindex="0">
-        <a>
-          Parent
-          <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
-        </a>
-        <ul class="p-2">
-          <li><a>Submenu 1</a></li>
-          <li><a>Submenu 2</a></li>
-        </ul>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
   </div>
   <div class="navbar-end">
     <a class="btn">Get started</a>
@@ -39,17 +23,21 @@
 </div>
 
 
-<div class="drawer drawer-mobile">
-  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" /> 
-  <div class="drawer-side">
-    <label for="my-drawer-2" class="drawer-overlay"></label> 
-    <ul class="menu p-4 w-80 bg-base-100 text-base-content">
+<div class="drawer drawer-mobile fixed pt-16 top-0">
+  <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    @yield('container')
+  </div>
+  <div class="drawer-side shadow-xl">
+    <label for="my-drawer-2" class="drawer-overlay"></label>
+    <ul class="menu p-4 w-80 bg-base-100 text-base-content space-y-1">
       <!-- Sidebar content here -->
-      <li><a>Sidebar Item 1</a></li>
-      <li><a>Sidebar Item 2</a></li>
+      <li><a href="/ruangan">Ruangan</a></li>
+      <li><a href="/">Sidebar Item 2</a></li>
     </ul>
-  
+
   </div>
 </div>
+
 </body>
 </html>
